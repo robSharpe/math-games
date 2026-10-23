@@ -1,0 +1,13 @@
+{
+  "name": "mattedyket",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mattedyket – ett mattespel under havet för barn 6 och 9 år. Fungerar offline.",
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/*.test.js",
+    "icons": "node tools/make-icons.mjs",
+    "start": "npx http-server -c-1 ."
+  },
+  "license": "MIT"
+}
