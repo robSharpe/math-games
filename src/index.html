@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mattedyket</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Ett mattespel under havet för barn – Lilla dyket (6 år) och Stora dyket (9 år). Fungerar utan internet.">
+<!--pwa-->
+<meta name="theme-color" content="#0E5C8C">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Mattedyket">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<!--/pwa-->
+<style>
+/*__STYLES__*/
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <radialGradient id="g-fish" cx="38%" cy="32%" r="75%">
+      <stop offset="0" stop-color="#FFC08A"/><stop offset=".55" stop-color="#FF8A5B"/><stop offset="1" stop-color="#F0603F"/>
+    </radialGradient>
+    <radialGradient id="g-pearl" cx="35%" cy="30%" r="70%">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#FFF4D6"/><stop offset="1" stop-color="#E9C77B"/>
+    </radialGradient>
+    <symbol id="i-mascot" viewBox="0 0 130 100">
+      <path d="M96 50 C104 40 114 30 124 26 C119 42 119 58 124 74 C114 70 104 60 96 50Z" fill="#FF8A5B" stroke="#C94A2E" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M44 20 C52 4 72 2 82 18 Z" fill="#FF9F6E" stroke="#C94A2E" stroke-width="2.5" stroke-linejoin="round"/>
+      <ellipse cx="56" cy="52" rx="44" ry="38" fill="url(#g-fish)" stroke="#C94A2E" stroke-width="2.5"/>
+      <path d="M26 72 C44 90 72 90 88 72 C72 80 44 80 26 72Z" fill="#FFE2CC" opacity=".85"/>
+      <path d="M70 46 c6 -6 6 -12 2 -18 M80 50 c6 -6 6 -12 2 -18" stroke="#F0603F" stroke-width="3" fill="none" stroke-linecap="round" opacity=".6"/>
+      <ellipse cx="64" cy="62" rx="12" ry="7" fill="#FF9F6E" stroke="#C94A2E" stroke-width="2" transform="rotate(-24 64 62)"/>
+      <circle cx="38" cy="44" r="15" fill="#FFFFFF" stroke="#C94A2E" stroke-width="2"/>
+      <circle class="pupil" cx="34" cy="45" r="8.5" fill="#0B2540"/>
+      <circle cx="30.5" cy="41" r="3" fill="#FFFFFF"/>
+      <circle cx="24" cy="60" r="5" fill="#FF6F8E" opacity=".45"/>
+      <path class="mouth" d="M17 63 C21 70 29 71 34 66" stroke="#0B2540" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="i-pearl" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="url(#g-pearl)" stroke="#C9A24F" stroke-width="1.2"/><ellipse cx="8.5" cy="8" rx="3" ry="2" fill="#FFFFFF" opacity=".9"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.6 1.3 6.5L12 17.2 6.1 20.4l1.3-6.5L2.5 9.3l6.6-.8z" stroke-linejoin="round"/></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3.5 11 12 4l8.5 7M6 9.5V20h4.5v-5.5h3V20H18V9.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-speak" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-mute" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M16 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M19.4 13.5a7.6 7.6 0 0 0 0-3l2-1.6-2-3.4-2.4 1a7.5 7.5 0 0 0-2.6-1.5L14 2.5h-4l-.4 2.5A7.5 7.5 0 0 0 7 6.5l-2.4-1-2 3.4 2 1.6a7.6 7.6 0 0 0 0 3l-2 1.6 2 3.4 2.4-1a7.5 7.5 0 0 0 2.6 1.5l.4 2.5h4l.4-2.5a7.5 7.5 0 0 0 2.6-1.5l2.4 1 2-3.4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-erase" viewBox="0 0 24 24"><path d="M9 5h11v14H9l-6-7z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M12 9.5l5 5m0-5l-5 5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M4.5 12.5l5 5 10-11" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2.5" fill="currentColor"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5" fill="none" stroke="currentColor" stroke-width="2.4"/></symbol>
+  </defs>
+</svg>
+
+<div class="sea" aria-hidden="true">
+  <div class="sea-dark"></div>
+  <div class="rays"><i></i><i></i><i></i><i></i></div>
+  <div class="bubbles" id="bubbles"></div>
+  <svg class="seabed" viewBox="0 0 1200 160" preserveAspectRatio="none">
+    <g class="weed" fill="#1F8A6E"><path d="M90 160 C70 120 110 100 88 60 C80 40 96 20 92 0 C112 30 104 60 112 90 C120 120 104 140 110 160Z"/></g>
+    <g class="weed w2" fill="#27A37F"><path d="M140 160 C130 130 150 110 138 80 C132 60 146 46 140 30 C160 56 152 80 158 106 C164 130 152 146 156 160Z"/></g>
+    <g class="weed w3" fill="#1F8A6E"><path d="M1040 160 C1020 120 1060 96 1040 56 C1032 36 1048 18 1044 0 C1066 30 1056 60 1064 92 C1072 122 1056 142 1062 160Z"/></g>
+    <g class="weed w2" fill="#2DB38B"><path d="M1100 160 C1092 136 1110 118 1100 92 C1096 76 1106 62 1102 50 C1120 72 1114 92 1118 114 C1122 134 1112 148 1116 160Z"/></g>
+    <g fill="#FF8C7A" opacity=".9"><path d="M300 160 C298 140 286 128 290 112 C296 124 302 126 304 116 C306 100 300 92 306 84 C314 96 312 110 318 116 C322 106 330 104 334 96 C336 112 326 126 326 140 C326 150 324 156 324 160Z"/></g>
+    <g fill="#FFB547" opacity=".85"><path d="M860 160 C856 146 846 140 848 126 C854 134 860 134 862 126 C864 116 870 112 874 106 C878 118 874 128 878 134 C884 128 890 128 894 122 C894 136 884 146 884 160Z"/></g>
+    <path d="M0 160 L0 128 C140 108 260 138 420 124 C600 108 720 140 880 126 C1020 114 1110 130 1200 120 L1200 160Z" fill="#E7C98F"/>
+    <path d="M0 160 L0 142 C180 130 320 152 520 142 C700 132 860 156 1020 144 C1100 138 1160 144 1200 140 L1200 160Z" fill="#D9B577"/>
+    <g fill="#C79C5E" opacity=".7"><circle cx="210" cy="146" r="3"/><circle cx="640" cy="150" r="2.5"/><circle cx="980" cy="150" r="3"/><circle cx="470" cy="138" r="2"/></g>
+  </svg>
+</div>
+
+<div id="app">
+
+  <!-- ============ START ============ -->
+  <section class="screen" id="screen-home" aria-labelledby="home-title">
+    <div class="topbar">
+      <button class="icon-btn" id="btn-sound" type="button" aria-label="Stäng av ljud"><svg><use href="#i-speak"/></svg></button>
+      <span class="spacer"></span>
+      <button class="icon-btn" id="btn-settings" type="button" aria-label="Inställningar för vuxna"><svg><use href="#i-gear"/></svg></button>
+    </div>
+    <div class="home-body">
+      <div class="hero">
+        <svg class="mascot hero-mascot" viewBox="0 0 130 100" role="img" aria-label="Fisken Bubbel"><use href="#i-mascot"/></svg>
+        <h1 id="home-title">Matte&shy;dyket</h1>
+        <p class="tagline">Välj ditt dyk!</p>
+      </div>
+      <div class="mode-cards">
+        <article class="mode-card" data-mode="small">
+          <button class="mode-play" type="button" data-play="small" aria-label="Spela Lilla dyket, för 6 år">
+            <span class="mode-age"><b>6</b> år</span>
+            <span class="mode-name">Lilla dyket</span>
+            <span class="mode-desc">Räkna, plus och minus, former och mönster</span>
+            <span class="mode-cta">Dyk! <svg><use href="#i-back"/></svg></span>
+          </button>
+          <div class="mode-foot">
+            <span class="pearl-count" data-pearls="small"><svg><use href="#i-pearl"/></svg><span>0</span></span>
+            <button class="chip-btn" type="button" data-aquarium="small">Akvariet <span class="chip-emoji" data-friends="small">🐠</span></button>
+          </div>
+        </article>
+        <article class="mode-card deep" data-mode="big">
+          <button class="mode-play" type="button" data-play="big" aria-label="Spela Stora dyket, för 9 år">
+            <span class="mode-age"><b>9</b> år</span>
+            <span class="mode-name">Stora dyket</span>
+            <span class="mode-desc">Gånger och delat, klockan, bråk och textuppgifter</span>
+            <span class="mode-cta">Dyk! <svg><use href="#i-back"/></svg></span>
+          </button>
+          <div class="mode-foot">
+            <span class="pearl-count" data-pearls="big"><svg><use href="#i-pearl"/></svg><span>0</span></span>
+            <button class="chip-btn" type="button" data-aquarium="big">Akvariet <span class="chip-emoji" data-friends="big">🐠</span></button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SPEL ============ -->
+  <section class="screen" id="screen-game" hidden aria-label="Dyket">
+    <div class="topbar game-top">
+      <button class="icon-btn" id="btn-quit" type="button" aria-label="Avsluta dyket"><svg><use href="#i-home"/></svg></button>
+      <div class="progress" id="progress" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0" aria-label="Pärlor i det här dyket"></div>
+      <button class="icon-btn speak-btn" id="btn-speak" type="button" aria-label="Läs upp frågan"><svg><use href="#i-speak"/></svg></button>
+    </div>
+    <div class="play" id="play">
+      <div class="q-wrap">
+        <div class="q-card" id="q-card">
+          <button class="q-mascot" id="q-mascot" type="button" aria-label="Läs upp frågan igen">
+            <svg class="mascot" viewBox="0 0 130 100" aria-hidden="true"><use href="#i-mascot"/></svg>
+          </button>
+          <div class="q-cat" id="q-cat"></div>
+          <div class="q-prompt" id="q-prompt" aria-live="polite"></div>
+          <div class="q-visual" id="q-visual"></div>
+          <div class="q-feedback" id="q-feedback" role="status" aria-live="polite"></div>
+        </div>
+      </div>
+      <div class="answers" id="answers"></div>
+    </div>
+  </section>
+
+  <!-- ============ SLUT ============ -->
+  <section class="screen" id="screen-end" hidden aria-labelledby="end-title">
+    <div class="end-body">
+      <div class="end-card">
+        <svg class="mascot end-mascot" viewBox="0 0 130 100" aria-hidden="true"><use href="#i-mascot"/></svg>
+        <h2 id="end-title">Snyggt dykt!</h2>
+        <div class="stars" id="end-stars" aria-label=""></div>
+        <p class="end-summary" id="end-summary"></p>
+        <div class="end-pearls"><svg><use href="#i-pearl"/></svg><span id="end-pearls">+0</span></div>
+        <div class="unlock" id="end-unlock" hidden>
+          <div class="unlock-glow"><span class="unlock-emoji" id="unlock-emoji"></span></div>
+          <p class="unlock-text"><span>Ny vän i akvariet!</span><strong id="unlock-name"></strong></p>
+        </div>
+        <p class="end-next" id="end-next"></p>
+        <div class="end-actions">
+          <button class="btn primary big" id="btn-again" type="button">Dyk igen</button>
+          <div class="end-row">
+            <button class="btn" id="btn-end-aquarium" type="button">Akvariet</button>
+            <button class="btn" id="btn-end-home" type="button">Hem</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AKVARIUM ============ -->
+  <section class="screen" id="screen-aquarium" hidden aria-labelledby="aq-title">
+    <div class="topbar">
+      <button class="icon-btn" type="button" data-back aria-label="Tillbaka"><svg><use href="#i-back"/></svg></button>
+      <h2 class="bar-title" id="aq-title">Akvariet</h2>
+      <span class="pearl-count light" id="aq-pearls"><svg><use href="#i-pearl"/></svg><span>0</span></span>
+    </div>
+    <div class="aq-body">
+      <div class="tank" id="tank" aria-label="Dina havsvänner"></div>
+      <p class="aq-next" id="aq-next"></p>
+      <div class="collection" id="collection"></div>
+    </div>
+  </section>
+
+  <!-- ============ INSTÄLLNINGAR ============ -->
+  <section class="screen" id="screen-settings" hidden aria-labelledby="set-title">
+    <div class="topbar">
+      <button class="icon-btn" type="button" data-back aria-label="Tillbaka"><svg><use href="#i-back"/></svg></button>
+      <h2 class="bar-title" id="set-title">För vuxna</h2>
+      <span class="spacer"></span>
+    </div>
+    <div class="settings-body">
+      <section class="panel">
+        <h3>Ljud och uppläsning</h3>
+        <label class="switch-row"><span>Ljudeffekter</span><input type="checkbox" role="switch" id="set-sound"></label>
+        <label class="switch-row"><span>Uppläsning av frågor</span><input type="checkbox" role="switch" id="set-speech"></label>
+        <label class="switch-row"><span>Läs upp automatiskt i Lilla dyket</span><input type="checkbox" role="switch" id="set-auto-small"></label>
+        <label class="switch-row"><span>Läs upp automatiskt i Stora dyket</span><input type="checkbox" role="switch" id="set-auto-big"></label>
+        <p class="note" id="voice-status"></p>
+        <button class="btn small" type="button" id="btn-test-voice">Testa rösten</button>
+      </section>
+
+      <section class="panel">
+        <h3>Uppgifter och framsteg</h3>
+        <p class="note">Spelet blandar alla valda områden och anpassar svårigheten efter hur det går. Stäng av områden som barnet inte ska öva på just nu.</p>
+        <div class="seg" role="tablist" aria-label="Välj läge">
+          <button type="button" role="tab" id="tab-small" data-tab="small" aria-selected="true">Lilla dyket · 6 år</button>
+          <button type="button" role="tab" id="tab-big" data-tab="big" aria-selected="false">Stora dyket · 9 år</button>
+        </div>
+        <div class="cat-list" id="cat-list"></div>
+      </section>
+
+      <section class="panel">
+        <h3>Spela utan internet</h3>
+        <p class="note" id="offline-status"></p>
+        <button class="btn primary small" type="button" id="btn-install" hidden>Installera Mattedyket</button>
+        <ul class="howto">
+          <li><b>iPad och iPhone:</b> öppna spelet i Safari, tryck på Dela-knappen och välj <i>Lägg till på hemskärmen</i>.</li>
+          <li><b>Android:</b> öppna spelet i Chrome, tryck på menyn ⋮ och välj <i>Installera app</i> eller <i>Lägg till på startskärmen</i>.</li>
+          <li><b>Dator:</b> spara filen <i>index.html</i> på datorn och öppna den i webbläsaren. Allt finns i den filen.</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h3>Börja om</h3>
+        <p class="note">Nollställer pärlor, akvariet och svårighetsnivåer för båda dyken.</p>
+        <button class="btn danger small" type="button" id="btn-reset">Nollställ allt</button>
+      </section>
+      <p class="credits">Mattedyket · Typsnitt: Fredoka (SIL Open Font License)</p>
+    </div>
+  </section>
+
+  <!-- ============ DIALOG ============ -->
+  <div class="dialog-backdrop" id="dialog" hidden>
+    <div class="dialog" role="alertdialog" aria-modal="true" aria-labelledby="dlg-title" aria-describedby="dlg-text">
+      <h2 id="dlg-title"></h2>
+      <p id="dlg-text"></p>
+      <div class="dialog-actions">
+        <button class="btn primary" type="button" id="dlg-cancel"></button>
+        <button class="btn" type="button" id="dlg-ok"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/*__SCRIPTS__*/
+</script>
+</body>
+</html>
